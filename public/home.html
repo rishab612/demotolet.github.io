@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amal Roy's To Let offers a range of rental properties with detailed information, high-quality images, and more. Find your perfect rental home today!">
+    <meta name="keywords" content="rental, house to let, property rental, Amal Roy, rental properties, homes for rent">
+    <meta name="author" content="Your Name">
+    <meta property="og:title" content="Amal Roy's To Let">
+    <meta property="og:description" content="Discover rental properties with Amal Roy's To Let. Browse detailed property listings and high-quality images to find your perfect rental home.">
+    <meta property="og:image" content="path/to/your/og-image.jpg">
+    <meta property="og:url" content="https://www.example.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Amal Roy's To Let">
+    <meta name="twitter:description" content="Find your ideal rental home with Amal Roy's To Let. Explore property listings with detailed information and images.">
+    <meta name="twitter:image" content="path/to/your/twitter-image.jpg">
+    <title>Amal Roy's To Let - Rental Properties</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/style/styles.css">
+    <link rel="stylesheet" href="/style/contact.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
+
+    <!-- Google Translate API -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en', 
+                includedLanguages: 'en,hi,bn,ta,te,ml,kn,mr,gu,pa,ur,as,or,sa,kok,mai'
+            }, 'google_translate_element');
+        }
+        
+    </script>
+     <script type="text/javascript">
+        console.log("JavaScript code is being executed");
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check the pathname and redirect if necessary
+            if (window.location.pathname !== '/public/home.html' && window.location.pathname !== '/public/contactus.html') {
+                console.log("Redirecting to home.html");
+                window.location.replace('/public/home.html');
+            }
+        });
+        if (window.location.pathname.endsWith('/public/') || window.location.pathname === '/public') {
+            console.log("Redirecting to home.html");
+            window.location.replace('/public/home.html');
+        }
+    </script>
+    
+    
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body>
+   <!-- Loading Spinner -->
+<div id="loading-spinner" class="loading-spinner">
+    <div class="spinner"></div>
+</div>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="/images/logo.png" alt="amal_roy_to_let_logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="home.html">
+                        <i class="fas fa-house-user"></i> Home <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#properties">
+                        <i class="fas fa-building"></i> View Property
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">
+                        <i class="fas fa-gavel"></i> Legal Contract
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">
+                        <i class="fas fa-user"></i> About Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html">
+                        <i class="fas fa-envelope"></i> Contact Us
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Language Selector -->
+            <div id="google_translate_element" class="language-selector">
+                <i class="fa fa-language" id="language-icon" aria-hidden="true"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+
+   
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide" style="background-color: lightcoral;">Slide 1</div>
+        <div class="slide" style="background-color: lightseagreen;">Slide 2</div>
+        <div class="slide" style="background-color: lightblue;">Slide 3</div>
+        <div class="slide" style="background-color: lightgoldenrodyellow;">Slide 4</div>
+    </div>
+
+    <button class="prev" onclick="prevSlide()">&#60;</button>
+    <button class="next" onclick="nextSlide()">&#62;</button>
+    
+    <div class="controls">
+        <button id="pausePlayBtn" onclick="pausePlay()">&#10074;&#10074;</button>
+        <div class="indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+    </div>
+</div>
+
+    <!-- Main content here -->
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/private/scripts.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+/* styles.css */
+
+/* Navbar Styling */
+/* Spinner overlay */
+#loading-spinner {
+    display: none; /* Initially hidden */
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Actual spinner */
+.spinner {
+    border: 12px solid #f3f3f3;
+    border-top: 12px solid #3498db;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+}
+
+/* Keyframes for spinner animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.navbar {
+    background-color: #343a40; /* Dark background */
+}
+
+.navbar-brand img {
+    width: 100px;  /* Adjust the width as needed */
+    height: auto;  /* This will maintain the aspect ratio */
+    max-width: 100%;
+}
+
+
+.navbar-brand i {
+    margin-right: 8px; /* Spacing between icon and text */
+}
+
+.nav-link {
+    
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff; /* White color for links */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #f8f9fa; /* Light color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+.navbar-toggler {
+    border-color: #ffffff; /* White border color */
+}
+
+.navbar-toggler-icon {
+    background-image: url('path/to/custom-toggler-icon.png'); /* Custom toggler icon */
+}
+
+/* Active link style */
+.navbar-nav .nav-item.active .nav-link {
+    font-weight: 600;
+   
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .language-selector {
+        margin-left: 80px;
+        margin-bottom: 20px;
+    }
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+.language-selector i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.language-selector select {
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+    cursor: pointer;
+    background-color: #f8f8f8;
+}
+
+#language-icon{
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%; /* Full width */
+    max-width: 100vw; /* Ensure it covers from one end to the other */
+    overflow: hidden;
+    height: 300px; /* Adjust the height as per your preference */
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 400%; /* Since there are 4 slides */
+}
+
+.slide {
+    min-width: 100%; /* Each slide takes up the full width */
+    height: 290px; /* Each slide takes up the full height of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pausePlayBtn {
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: black;
+    display: none; /* Hide the button initially */
+}
+
+
+
+
+.indicators {
+    display: flex;
+    gap: 5px;
+}
+
+.indicator {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.indicator.active {
+    opacity: 1;
+}
+
+/* Make the slider responsive */
+@media (max-width: 768px) {
+    .slide {
+        font-size: 1.5em; /* Adjust text size for smaller screens */
+    }
+
+    .prev, .next {
+        font-size: 1.5em; /* Adjust button size */
+    }
+
+    .slider-container {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .slide {
+        font-size: 1em; /* Further adjust text size for smaller screens */
+    }
+
+    .slider-container {
+        height: 150px; /* Further adjust height for very small screens */
+    }
+}
+
